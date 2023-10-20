@@ -1,8 +1,7 @@
 <html>
 <body>
  
-Welcome <?php echo $_GET["txtName"]; ?><br>
-Your email address is: <?php echo $_GET["txtEmail"]; ?>
+Quotient : <?php echo $_GET["txtDividende"] / $_GET["txtDiviseur"]; ?><br>
  
 </body>
 </html>
