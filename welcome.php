@@ -1,18 +1,38 @@
 <html>
 <body> 
  
+
 <?php
-$un = $_GET["txtDepart"];
 
-echo "Valeur pour le rang 0 : $un<br>";
+$txtChamp = $_GET["txtChamp"];
+$txtInstant = $_GET["txtInstant"];
 
-for ($i = 0; $i != $_GET["txtRang"] + 1; $i++)
-{
-    $calc = $un / 4 + 2;
-    $un = $calc;
-    echo "Valeur pour le $i", "eme rang : $un<br>"; 
-}
+$y =  $txtChamp * $txtInstant * $txtInstant / 2;
+$v = $txtChamp * $txtInstant;
 
+echo "<table border='1'>
+        <tr>
+            <td>Distance parcourue après " . $txtInstant . " secondes  = " . $y . " mètres.</td>
+        </tr>
+        <tr>
+        <td>Vitesse acquise après " . $txtInstant . " secondes  = " . $v . " mètres/secondes.</td>
+        </tr>
+    </table>";
+
+
+
+    echo "<table border='1'>";
+    echo "<tr>";
+    echo "<td>Temps écoulé (s)</td>";
+    echo "<td>Vitesse acquise (m/s)</td>";
+    echo "</tr>";
+    for ($i = 0; $i < $_GET["txtInstant"] + 1; $i++) {
+        echo "<tr>";
+        echo "<td>$i</td>";
+        echo "<td>" . $i*$txtChamp . "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
 ?>
 
 </body>
