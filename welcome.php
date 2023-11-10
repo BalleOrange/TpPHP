@@ -10,14 +10,14 @@ $txtInstant = $_GET["txtInstant"];
 $y =  $txtChamp * $txtInstant * $txtInstant / 2;
 $v = $txtChamp * $txtInstant;
 
-echo "<table border='1'>
-        <tr>
-            <td>Distance parcourue après " . $txtInstant . " secondes  = " . $y . " mètres.</td>
-        </tr>
-        <tr>
-        <td>Vitesse acquise après " . $txtInstant . " secondes  = " . $v . " mètres/secondes.</td>
-        </tr>
-    </table>";
+echo "<table border='1'>";
+echo "<tr>";
+echo "<td>Distance parcourue après $txtInstant secondes  =  $y mètres.</td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td>Vitesse acquise après $txtInstant secondes  = $v mètres/secondes.</td>";
+echo "</tr>";
+echo "</table>";
 
 
 
@@ -29,7 +29,7 @@ echo "<table border='1'>
     for ($i = 0; $i < $_GET["txtInstant"] + 1; $i++) {
         echo "<tr>";
         echo "<td>$i</td>";
-        echo "<td>" . $i*$txtChamp . "</td>";
+        echo "<td>", $i*$txtChamp, "</td>";
         echo "</tr>";
     }
     echo "</table>";
