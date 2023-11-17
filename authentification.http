@@ -1,0 +1,5 @@
+POST http://localhost/TPPHP/c_authentification.php HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+ 
+mel=jacques.martin@laposte.net
+&mot_de_passe=secretmartin

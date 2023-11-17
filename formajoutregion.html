@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ajout de région</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<form action="php/ajouterregion.php" method = "post" ">
+Numéro : <input name="numero" type="text" size ="30" pattern="[0-9._%+-]"">
+Nom région : <input name="region" type="text" size ="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"">
+<input type="submit" value="Ajouter une région">
+</form>
+</body>
+</html>
